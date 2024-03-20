@@ -1,4 +1,5 @@
 const mainButton = document.querySelector("#main-button")
+const showResult = document.querySelector("#show-result")
 
 function generateNumber(){
     const minNumber = Math.ceil(document.querySelector("#input-min").value)
@@ -7,9 +8,9 @@ function generateNumber(){
     if (maxNumber > minNumber) {
         const result = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber
 
-        alert(result)
+        showResult.textContent = `Resultado: ${result}`
     } else {
-        alert("Digite um número maior que o primeiro")
+        console.log("Digite um número maior que o primeiro")
     }
 }
 
